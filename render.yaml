@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hsh-form-filler
+    env: docker
+    plan: starter      # use a paid plan for always-on
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: API_KEY
+        value: super-secret-key
